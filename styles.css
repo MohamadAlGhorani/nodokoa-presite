@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+}
+.intro-video{
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: all 1s;
+}
+.intro-video.active{
+    opacity: 1;
+    transition: all 1s;
+}
+.logo-button {
+    z-index: 99999;
+    position: absolute;
+    margin: 0 auto;
+    left: 1px;
+    right: 1px;
+    align-self: center;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    border: none;
+    background-image: url('assets/images/nodokoa-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    animation:btnAnimation 2s infinite ease-in-out;
+}
+.logo-button.dance {
+    animation:dancing 1s infinite ease-in-out;
+}
+
+@keyframes btnAnimation {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes dancing {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.3);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
