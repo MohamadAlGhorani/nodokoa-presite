@@ -7,6 +7,11 @@ body{
     height: 100vh;
     background-color: #000;
     display: flex;
+    transition: all 2s;
+}
+.main.is-white {
+    background-color: #fff;
+    transition: all 2s;
 }
 .intro-video{
     width: 100%;
@@ -34,9 +39,44 @@ body{
     background-size: contain;
     background-position: center center;
     animation:btnAnimation 2s infinite ease-in-out;
+    cursor: pointer;
+    transition: all 1s;
 }
 .logo-button.dance {
     animation:dancing 1s infinite ease-in-out;
+}
+.logo-button.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.intro-text {
+    text-align: center;
+    color: #000;
+    opacity: 0;
+    transition: all 1s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 601px;
+    min-width: 300px;
+    line-height: 1.4rem;
+    align-self: center;
+}
+.intro-text span{
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+.intro-text.show {
+    opacity: 1;
+    transition: all 1s;
 }
 
 @keyframes btnAnimation {
